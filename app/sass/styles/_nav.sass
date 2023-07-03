@@ -1,0 +1,27 @@
+@use "vars"
+@use "mixins"
+.nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 4.5rem 12rem 4.3rem
+    &__navigation
+        display: flex
+    &__links
+        display: flex
+    &__links-item
+        @include mixins.commonText($color: vars.$neutral100, $fontSize: 1.6rem)
+        margin-right: 3.2rem
+        &:last-child
+            margin-right: 6.8rem
+    &__contact
+        @include mixins.link
+        position: relative
+        &::before
+            content: ""
+            width: 96%
+            height: 1px
+            background-color: #000
+            position: absolute
+            bottom: -6px //??????
+            left: 0

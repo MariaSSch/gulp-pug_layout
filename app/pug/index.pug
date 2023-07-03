@@ -1,0 +1,41 @@
+extends includes/template.pug
+append config
+    - currentURL = "index.html"
+prepend links 
+    link(rel="stylesheet", href="../css/index.css")
+append header
+    header.header 
+        .header__text-container
+            .header__bg-red
+            .header__text
+                h1.header__title Digitally forward creative
+                p.header__slogan When it comes to interactive marketing, we've got you covered. Be where the world is going
+                .header__form 
+                    form
+                        input.header__form-input(type="text" name="email" placeholder="Enter your email") 
+                        button.header__form-submit(type="submit") Try for free
+            .header__figures 
+                .header__graph-container
+                    figure.header__salesreport 
+                        figcaption.header__figures-title Sales report
+                        img(src="../img/salesgraph.png", alt="sales")
+                    figure.header__customergrowth 
+                        figcaption.header__figures-title Customer growth
+                        img(src="../img/customergraph.png", alt="growth")
+                .header__statistic 
+                    .header__statistic-sales 
+                        p.header__statistic-title Sales 
+                        p.header__statistic-value &#36;31,092 
+                        p.header__statistic-dynamic 
+                            span.green &uarr; 4.2% 
+                            | from last year
+                    .header__statistic-marketing 
+                        p.header__statistic-title Marketing 
+                        p.header__statistic-value &#36;29,128 
+                        p.header__statistic-dynamic 
+                            span.red &darr; 1.2% 
+                            | from last year 
+
+
+block footer 
+    include includes/footer_light.pug

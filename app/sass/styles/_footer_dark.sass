@@ -1,0 +1,73 @@
+@use "vars"
+@use "mixins"
+.footer_dark-theme
+    padding: 0rem 12rem 2.1rem
+    width: 100%
+    background-color: vars.$neutral100
+    .footer__frame
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 13.4rem
+        .footer__title
+            @include mixins.sectionTitle($color: vars.$neutral10, $fontSize: 6.4rem, $letterSpacing: normal)
+            margin-bottom: 2.4rem
+        .footer__idea
+            width: 64.3rem
+            color: vars.$neutral50
+            font-size: 1.8rem
+            font-family: vars.$mainFont
+            font-weight: 500
+            line-height: 3.2rem
+            position: relative
+        .btn
+            @include mixins.button
+            color: vars.$neutral100
+            background-color: vars.$neutral10
+    .footer__content
+        display: flex
+        justify-content: space-between
+        .footer__logo-text
+            @include mixins.commonText($color: vars.$neutral60, $fontSize: 1.6rem)
+            width: 29.2rem
+        .footer__links
+            display: flex
+            .footer__links-set
+                margin-right: 9.33rem
+                &:last-child
+                    margin-right: 0
+                .footer__links-item
+                    @include mixins.footerText($color: vars.$neutral60, $fontWeight: 400)
+                    margin-bottom: 1.6rem
+                    &:first-child
+                        font-weight: 700
+                        color: vars.$neutral10
+                        margin-bottom: 2.4rem
+                    &:last-child
+                        margin-bottom: 0
+    hr
+        background-color: #606060
+        margin-top: 5.6rem
+    .footer__basement
+        padding: 4rem 0 5.8rem
+        display: flex
+        justify-content: space-between
+        .footer__mutable
+            display: flex
+            .footer__social
+                display: flex
+                .footer__social-icon
+                    margin-right: 2.4rem
+                    &:last-child
+                        margin-right: 0
+            .footer__basement-links
+                margin-left: 7.2rem
+                display: flex
+                .footer__basement-links-item
+                    @include mixins.basementText
+                    margin-right: 4rem
+                    &:last-child
+                        margin-right: 0
+        .footer__copyright
+            @include mixins.basementText
+

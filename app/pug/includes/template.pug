@@ -1,0 +1,24 @@
+block config 
+    include config.pug 
+doctype html 
+html 
+    head(lang=lang)
+        meta(charset="utf-8")
+        block metatags 
+            meta(name="description", content=content)
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+        block links 
+            link(rel="stylesheet", href="../css/main.css")
+        title #{pageTitle}
+body 
+    include nav.pug
+    block header 
+    block main
+
+    //- if (currentURL == "index.html" || "blog.html")
+    //-     include footer_light.pug 
+    //- else 
+    //-     include footer_dark.pug
+    block footer
+            

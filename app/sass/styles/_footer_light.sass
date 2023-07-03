@@ -1,0 +1,108 @@
+@use "vars"
+@use "mixins"
+.footer_light-theme
+    padding: 0rem 12rem 2.1rem
+    width: 100%
+    .footer__bg-red
+        width: 62.1rem
+        height: 55.2rem
+        background-image: url(../img/bg_red.png)
+        background-size: cover
+        // border-radius: 70% 70% 100% 100%
+        // opacity: 0.12999999523162842
+        // background: #FA7515
+        // filter: blur(11rem)
+        position: relative
+        top: 95rem
+        left: 5.4rem
+    .footer__bg-blue
+        width: 28.1rem
+        height: 52.5rem
+        // border-radius: 525px 0 0 525px
+        // background: rgba(226, 248, 240, 0.70)
+        // filter: blur(90px)
+        z-index: -1
+        position: relative
+        top: 54.6rem
+        left: calc(100% - 14rem)
+        img
+            object-fit: none
+            object-position: 55% 34%
+
+    .footer__frame
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 12.8rem
+        .footer__title
+            @include mixins.sectionTitle($color: vars.$neutral100, $fontSize: 6.4rem, $letterSpacing: normal)
+            margin-bottom: 3.2rem
+        .footer__idea
+            width: 64.3rem
+            color: vars.$neutral100
+            font-size: 2.4rem
+            font-family: vars.$mainFont
+            font-weight: 600
+            line-height: 3.4rem
+            position: relative
+            padding-left: 10rem
+            // margin-bottom: 5.2rem
+            &::before
+                content:""
+                width: 76px
+                height: 1px
+                background-color: #000
+                position: absolute
+                left: 0rem
+                top: 2rem
+
+        .btn
+            @include mixins.button
+    .footer__content
+        display: flex
+        justify-content: space-between
+        .footer__logo-text
+            @include mixins.commonText($color: vars.$neutral100, $fontSize: 1.6rem)
+            width: 29.2rem
+        .footer__links
+            display: flex
+            .footer__links-set
+                margin-right: 9.33rem
+                &:last-child
+                    margin-right: 0
+                .footer__links-item
+                    @include mixins.footerText($color: vars.$neutral100, $fontWeight: 400)
+                    margin-bottom: 1.6rem
+                    &:first-child
+                        font-weight: 700
+                        margin-bottom: 2.4rem
+                    &:last-child
+                        margin-bottom: 0
+    hr
+        background-color: vars.$neutral40
+        margin-top: 7.9rem
+    .footer__basement
+        padding: 4.6rem 0 5.9rem
+        text-align: center
+        // display: flex
+        // justify-content: space-between
+        .footer__mutable
+            display: flex
+            .footer__social
+                display: flex
+                .footer__social-icon
+                    margin-right: 2.4rem
+                    &:last-child
+                        margin-right: 0
+            .footer__basement-links
+                margin-left: 7.2rem
+                display: flex
+                .footer__basement-links-item
+                    @include mixins.basementText
+                    margin-right: 4rem
+                    &:last-child
+                        margin-right: 0
+        .footer__copyright
+            @include mixins.basementText
+            color: vars.$neutral50
+

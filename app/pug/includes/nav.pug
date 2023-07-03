@@ -1,0 +1,9 @@
+include config.pug
+nav.nav 
+    .nav__logo 
+        img(src="../img/logo.png", alt="logo")
+    .nav__navigation 
+        ul.nav__links
+            each link in navLinks 
+                li.nav__links-item: a(href=link.linkURL target="_blank") #{link.linkName}
+        a.nav__contact(href="#" target="_blank") Contact us &rarr;

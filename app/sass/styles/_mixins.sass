@@ -1,0 +1,99 @@
+@use "vars"
+
+@mixin commonText($color: vars.$neutral100, $fontSize: 1.8rem)
+    color: $color
+    font-size: $fontSize //1.8/1.6rem
+    font-family: vars.$mainFont
+    font-weight: 500
+    line-height: 2.6rem //27/26px
+
+@mixin mainText($color: vars.$neutral60, $fontSize: 1.8rem)
+    color: $color
+    font-size: $fontSize //4rem for review
+    font-family: vars.$mainFont
+    font-weight: 500
+    line-height: 3.2rem
+    //letter-spacing: -1px for review
+
+@mixin secondaryText($color: vars.$secondaryText)
+    color: $color
+    font-size: 1.4rem
+    font-family: vars.$mainFont
+    font-weight: 600
+    line-height: 2rem //2 / 150->21
+
+@mixin footerText($color: vars.$neutral100, $fontWeight: 400)
+    color: $color
+    font-size: 1.6rem
+    font-family: vars.$mainFont
+    font-weight: $fontWeight //700
+    line-height: 2.4rem
+    
+@mixin basementText
+    color: vars.$neutral10
+    font-size: 1.4rem
+    font-family: vars.$mainFont
+    font-weight: 500
+    line-height: 2rem
+
+@mixin featureText($color: vars.$neutral10, $lineHeight: 2.6rem)
+    color: $color
+    font-size: 2rem
+    font-family: vars.$mainFont
+    font-weight: 700
+    line-height: $lineHeight    
+
+@mixin link
+    color: #000
+    font-size: 1.6rem
+    font-family: vars.$mainFont
+    font-weight: 600
+    line-height: 2.4rem
+
+@mixin button
+    color: vars.$neutral10
+    text-align: center
+    font-size: 1.6rem
+    font-family: vars.$mainFont
+    font-weight: 700
+    line-height: 2.4rem
+    padding: 1.6rem 3.2rem
+    border-radius: 10rem
+    background-color: vars.$neutral100
+
+@mixin btnRound
+    width: 5rem
+    height: 5rem
+    border: 1px solid vars.$neutral100
+    border-radius: 50%
+    background-color: vars.$neutral100
+    color: vars.$neutral10
+    &:disabled
+        border: 1px solid vars.$neutral40
+        background-color: vars.$neutral10
+        color: vars.$neutral40
+
+
+@mixin pageTitle($fontSize: 8rem)
+    color: vars.$neutral100
+    font-size: $fontSize
+    font-family: vars.$mainFont
+    font-weight: 700
+    line-height: 120%
+    letter-spacing: -0.3rem
+
+@mixin sectionTitle($color: vars.$neutral100, $fontSize: 5.6rem, $letterSpacing: -0.2rem)
+    color: $color
+    font-size: $fontSize
+    font-family: vars.$mainFont
+    font-weight: 600
+    line-height: 120%
+    letter-spacing: $letterSpacing
+
+@mixin h3($color: vars.$neutral100)
+    color: $color
+    font-size: 3.2rem
+    font-family: vars.$mainFont
+    font-weight: 600
+    line-height: 4.2rem
+    letter-spacing: -0.1rem

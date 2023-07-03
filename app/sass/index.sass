@@ -1,0 +1,102 @@
+@use "styles/vars"
+@use "styles/mixins"
+    
+.header
+    padding: 0 12rem 2.2rem
+    position: relative
+    &__text-container
+        display: flex
+    &__text
+    &__title
+        @include mixins.pageTitle($fontSize: 8rem)
+        margin-bottom: 11.4rem
+    &__slogan
+        color: vars.$neutral100
+        font-size: 3.2rem
+        font-family: vars.$mainFont
+        font-weight: 600
+        line-height: 4.2rem
+        letter-spacing: -0.1rem
+        position: relative
+        padding-left: 10.3rem
+        margin-bottom: 6.9rem
+        max-width: 61.7rem //514 + 103
+        &::before
+            content: ""
+            width: 7.6rem
+            height: 0.1rem
+            background-color: #000
+            position: absolute
+            left: 0rem
+            top: 2.1rem
+    &__form-input
+        margin-right: 1.6rem
+        width: 28rem
+        height: 4.7rem
+        color: vars.$neutral60
+        border-bottom: 1px solid vars.$neutral40
+        color: vars.$neutral60
+        font-size: 1.6rem
+        font-family: vars.$mainFont
+        line-height: 2.4rem
+    &__form-submit
+        @include mixins.button
+    // &__graph-container
+    //     position: relative
+    &__salesreport
+        position: relative
+        top: 8.8rem
+        left: 0
+        padding: 2rem
+        border-radius: 8px
+        background: vars.$neutral10
+        box-shadow: 20px 40px 80px 0px rgba(89, 96, 135, 0.12)
+        figcaption
+            @include mixins.featureText($color: vars.$neutral100, $lineHeight: 3rem)
+            margin-bottom: 1.6rem
+        img
+            width: 36.6rem
+            height: 26rem
+    &__customergrowth
+        position: relative
+        top: -28rem
+        left: 31.3rem
+        padding: 1.6rem
+        width: 213px
+        border-radius: 8px
+        background: vars.$neutral10
+        box-shadow: 20px 40px 80px 0px rgba(45, 51, 81, 0.12)
+        figcaption
+            @include mixins.featureText($color: vars.$neutral100, $lineHeight: 3rem)
+            font-size: 1.6rem
+            margin-bottom: 1.2rem
+        img
+            width: 17.7rem
+            height: 14.8rem
+    &__statistic
+        position: relative
+        top: -11.3rem
+        padding: 2rem
+        display: flex
+        justify-content: space-between
+        background-color: #000
+        border-radius: 8px
+        width: 41.9rem
+    &__statistic-title
+        @include mixins.secondaryText($color: vars.$secondaryText)
+    &__statistic-value
+        @include mixins.featureText($color: vars.$neutral10)
+        margin-bottom: 7px
+    &__statistic-dynamic
+        @include mixins.secondaryText($color: vars.$secondaryText)
+        font-weight: 400
+        .green
+            color: vars.$green
+        .red
+            color: vars.$red
+        // color: vars.$neutral100
+        // font-size: 2rem
+        // font-family: vars.$mainFont
+        // font-weight: 700
+        // line-height: 3rem
+        // letter-spacing: -0.5px
